@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using System;
 
+
 public class Warrior : Character
 {
     public AttackConfiguration[] attacks = new AttackConfiguration[0];
