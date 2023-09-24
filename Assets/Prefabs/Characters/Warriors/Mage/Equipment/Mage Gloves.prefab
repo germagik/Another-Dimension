@@ -11,6 +11,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mage Gloves
       objectReference: {fileID: 0}
+    - target: {fileID: 1961587795963666254, guid: 0a69eb342597810488a921e3ca8d7d8d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961587795963666254, guid: 0a69eb342597810488a921e3ca8d7d8d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961587795963666254, guid: 0a69eb342597810488a921e3ca8d7d8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130072160150680669, guid: 0a69eb342597810488a921e3ca8d7d8d, type: 3}
+      propertyPath: m_Name
+      value: Mage Gloves
+      objectReference: {fileID: 0}
     - target: {fileID: 5366543312790678379, guid: 0a69eb342597810488a921e3ca8d7d8d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -57,20 +73,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a69eb342597810488a921e3ca8d7d8d, type: 3}
---- !u!1 &7986353192880303400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1681415346872268794, guid: 0a69eb342597810488a921e3ca8d7d8d, type: 3}
-  m_PrefabInstance: {fileID: 8755190859719891666}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7839456507654914962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7986353192880303400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3c8c44201c2c9346af8629dcc730350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

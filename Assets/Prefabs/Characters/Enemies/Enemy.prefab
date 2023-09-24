@@ -74,4 +74,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bc8ab4b34ee4a488bfc49c6d06303e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drops: []
+  drops:
+  - grade: 0
+    item: {fileID: 0}

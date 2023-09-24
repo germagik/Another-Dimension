@@ -5,8 +5,14 @@ using System.Linq;
 using System;
 
 
+
 public class Warrior : Character
-{
+{ 
+    public float speed = 10f;
+
+    private Part[] parts;
+    private Vector3 direction;
+    
     public AttackConfiguration[] attacks = new AttackConfiguration[0];
     protected virtual void Reset()
     {
@@ -33,13 +39,45 @@ public class Warrior : Character
     // Start is called before the first frame update
     void Start()
     {
-        
+       parts = GetComponentsInChildren<Part>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Move();
+        Aim();
+        Attack();
+    } 
+    void Move()
+    {
+        float axisX = Input.GetAxis("Horizontal");
+        float axisY = Input.GetAxis("Vertical");
+        direction = new Vector3(axisX,axisY,0);
+        if (direction.magnitude > 1)
+        {
+            direction = direction.normalized;
+        }  
+        transform.position += direction * speed *Time.deltaTime;
+
+    }  
+    void Aim()
+    {
+        if (direction.magnitude !=0 )
+        {
+            for (int i = 0; i < parts.Length; i++)
+            {
+                parts[i].transform.up = -direction;
+            }
+        }      
         
+    }
+    void Attack()
+    {
+        if (Input.GetKeyUp(KeyCode.Z))
+        {
+            attacks[0].attack.Perform();
+        }
     }
 }
 

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class InstantAttack : Attack
 {
+    public override void Perform()
+    {
+        throw new System.NotImplementedException();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
