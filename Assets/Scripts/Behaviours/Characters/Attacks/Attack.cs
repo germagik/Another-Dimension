@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] protected Effect effect;
+    public void Perform()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Instantiate(effect, transform.position, transform.rotation);
     }
 }
