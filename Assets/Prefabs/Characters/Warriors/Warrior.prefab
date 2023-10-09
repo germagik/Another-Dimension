@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior
       objectReference: {fileID: 0}
+    - target: {fileID: 8425434268755065457, guid: a0930141bd8a92b40a1dacc174ecb1c6, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8433505586336579062, guid: a0930141bd8a92b40a1dacc174ecb1c6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -75,4 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  range: 1
+  maxLife: 2
   attacks: []
+  closestEnemy: {fileID: 0}
+  attackSlowdownTime: 2
+  attackSlowdownFactor: 2

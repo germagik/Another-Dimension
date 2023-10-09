@@ -12,6 +12,10 @@ PrefabInstance:
       value: Mage Hat
       objectReference: {fileID: 0}
     - target: {fileID: 1961587795963666254, guid: 0a69eb342597810488a921e3ca8d7d8d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961587795963666254, guid: 0a69eb342597810488a921e3ca8d7d8d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}

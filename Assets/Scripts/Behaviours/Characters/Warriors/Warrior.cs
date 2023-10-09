@@ -3,96 +3,89 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using System.Runtime.CompilerServices;
+using UnityEditor.Tilemaps;
+using UnityEngine.UIElements;
 
 
 
 public class Warrior : Character
 { 
-    public float speed = 10f;
-
-    private Part[] parts;
-    private Vector3 direction;
-    
-    public AttackConfiguration[] attacks = new AttackConfiguration[0];
-    protected virtual void Reset()
+    private static Warrior instance;
+    public Enemy closestEnemy;
+    private float closestDistance;
+    private float attackingTimer;
+    public float attackSlowdownTime = 2f;
+    public float attackSlowdownFactor = 2f;
+    void Awake()
     {
-        Attack[] attacksComponents = GetComponentsInChildren<Attack>();
-        AttackConfiguration[] previousAttacks = attacks;
-        attacks = new AttackConfiguration[attacksComponents.Length];
-        for (int i = 0; i < attacksComponents.Length; i++)
-        {
-            Attack attack = attacksComponents[i];
-            AttackConfiguration previousAttack = previousAttacks.ElementAtOrDefault(i);
-            if(previousAttack != null)
-            {
-                previousAttack.attack = attack;
-                attacks[i] = previousAttack;
-            } else {
-                attacks[i] = new AttackConfiguration(attack);
-            }
-        }
+        instance = this;
+       
     }
-    void OnValidate()
+    public static Warrior Instance()
     {
-        Reset();
+        return instance;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-       parts = GetComponentsInChildren<Part>();
-    }
-
     // Update is called once per frame
     void Update()
     {
         Move();
-        Aim();
         Attack();
     } 
     void Move()
     {
         float axisX = Input.GetAxis("Horizontal");
         float axisY = Input.GetAxis("Vertical");
-        direction = new Vector3(axisX,axisY,0);
-        if (direction.magnitude > 1)
+        Vector3 direction = new Vector3(axisX,axisY,0);
+        if (attackingTimer > 0)
         {
-            direction = direction.normalized;
-        }  
-        transform.position += direction * speed *Time.deltaTime;
-
-    }  
-    void Aim()
-    {
-        if (direction.magnitude !=0 )
-        {
-            for (int i = 0; i < parts.Length; i++)
+            MoveTo(direction, attackSlowdownFactor);
+            if (closestEnemy == null)
             {
-                parts[i].transform.up = -direction;
+                PointTo(direction);
             }
-        }      
-        
+        }
+        else 
+        {
+            MoveTo(direction);
+            PointTo(direction);  
+        }     
+    }  
+    public void CheckEnemyAtDistance(Enemy enemy, float distance)
+    {
+        if (distance <= range)
+        {
+            if (closestEnemy == null || distance < closestDistance)
+            {
+                closestEnemy = enemy;
+                closestDistance = distance;
+            }
+        }
+        else if (closestEnemy == enemy)
+        {
+            closestEnemy = null;
+            closestDistance = 0;
+        }
     }
     void Attack()
     {
-        if (Input.GetKeyUp(KeyCode.Z))
+        if(attackingTimer > 0)
         {
-            attacks[0].attack.Perform();
+            attackingTimer -= Time.deltaTime;
+            Aim();
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            attackingTimer = attackSlowdownTime;
+            Aim();
+            attacks[0].Perform("Enemies");
         }
     }
-}
-
-
-public enum AimingStrategy {
-    Closest, Stronger, Healthier
-}
-
-[Serializable]
-public class AttackConfiguration {
-    public AimingStrategy aimingStrategy;
-    public Attack attack;
-
-    public AttackConfiguration(Attack newAttack, AimingStrategy newAimingStrategy = AimingStrategy.Closest) {
-        attack = newAttack;
-        aimingStrategy = newAimingStrategy;
+    void Aim()
+    {
+        if (closestEnemy != null)
+        {
+            PointTo(closestEnemy.transform.position - transform.position);
+        }
     }
 }

@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8425434268755065457, guid: a0930141bd8a92b40a1dacc174ecb1c6, type: 3}
+      propertyPath: m_TagString
+      value: Enemies
+      objectReference: {fileID: 0}
     - target: {fileID: 8433505586336579062, guid: a0930141bd8a92b40a1dacc174ecb1c6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -74,6 +78,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bc8ab4b34ee4a488bfc49c6d06303e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  range: 1
+  maxLife: 100
+  attacks: []
   drops:
   - grade: 0
     item: {fileID: 0}
