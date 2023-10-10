@@ -1,37 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using System;
-using System.Runtime.CompilerServices;
-using UnityEditor.Tilemaps;
-using UnityEngine.UIElements;
-
-
+using Unity.VisualScripting;
 
 public class Warrior : Character
 { 
     private static Warrior instance;
-    public Enemy closestEnemy;
+    private Enemy closestEnemy;
     private float closestDistance;
     private float attackingTimer;
     public float attackSlowdownTime = 2f;
     public float attackSlowdownFactor = 2f;
-    void Awake()
+    public override void Awake()
     {
+        base.Awake();
         instance = this;
-       
     }
     public static Warrior Instance()
     {
         return instance;
     }
-    // Update is called once per frame
+    public void CheckEnemyAtDistance(Enemy enemy, float distance)
+    {
+        if (distance <= range)
+        {
+            if (closestEnemy == null || distance < closestDistance)
+            {
+                closestEnemy = enemy;
+                closestDistance = distance;
+            }
+        }
+        else if (closestEnemy == enemy)
+        {
+            closestEnemy = null;
+            closestDistance = 0;
+        }
+    }
     void Update()
     {
         Move();
         Attack();
-    } 
+    }
     void Move()
     {
         float axisX = Input.GetAxis("Horizontal");
@@ -50,22 +57,6 @@ public class Warrior : Character
             MoveTo(direction);
             PointTo(direction);  
         }     
-    }  
-    public void CheckEnemyAtDistance(Enemy enemy, float distance)
-    {
-        if (distance <= range)
-        {
-            if (closestEnemy == null || distance < closestDistance)
-            {
-                closestEnemy = enemy;
-                closestDistance = distance;
-            }
-        }
-        else if (closestEnemy == enemy)
-        {
-            closestEnemy = null;
-            closestDistance = 0;
-        }
     }
     void Attack()
     {
@@ -83,7 +74,7 @@ public class Warrior : Character
     }
     void Aim()
     {
-        if (closestEnemy != null)
+        if (closestEnemy != null && !closestEnemy.IsDestroyed())
         {
             PointTo(closestEnemy.transform.position - transform.position);
         }

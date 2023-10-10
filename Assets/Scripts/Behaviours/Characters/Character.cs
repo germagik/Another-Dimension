@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /*
@@ -16,16 +13,32 @@ public class Character : MonoBehaviour
     public float range = 1f;
     public float maxLife = 100f; 
     private float life;
+    private TextMesh lifeText;
+    public TextMesh infoText;
     public Attack[] attacks = new Attack[0]; 
     private Part[] parts;
-    void Reset()
+    public virtual void Awake()
     {
+        parts = GetComponentsInChildren<Part>();
         attacks = GetComponentsInChildren<Attack>();
-        life = maxLife;
+        TextMesh[] texts = GetComponentsInChildren<TextMesh>();
+        foreach(TextMesh textMesh in texts)
+        {
+            if (textMesh.name == "Life")
+            {
+                lifeText = textMesh;
+            }
+            if (textMesh.name == "Info")
+            {
+                infoText = textMesh;
+            }
+        }
+        SetLife(maxLife);
     }
-    void OnValidate ()
+    void SetLife(float newLife)
     {
-        Reset();
+        life = newLife;
+        lifeText.text = life.ToString();
     }
     public void MoveTo(Vector3 direction, float speedFactor = 1f)
     {
@@ -42,16 +55,12 @@ public class Character : MonoBehaviour
             parts[i].transform.up = -direction;
         }
     }
-    public virtual void Start()
-    {
-        parts = GetComponentsInChildren<Part>();
-    } 
     public void ReceiveDamage(float damage)
     {
-        life -= damage;
+        SetLife(life - damage);
         if (life <= 0)
         {
             Destroy(gameObject);
         }
-    }   
+    }
 }

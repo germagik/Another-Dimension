@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Camera : MonoBehaviour
@@ -13,7 +12,10 @@ public class Camera : MonoBehaviour
     }
     void Update()
     {
-      
+        if (warrior.IsDestroyed())
+        {
+            return;
+        }
         Vector3 direction = (warrior.transform.position - transform.position) * speed * Time.deltaTime;
         transform.position += new Vector3(direction.x, direction.y);
     }

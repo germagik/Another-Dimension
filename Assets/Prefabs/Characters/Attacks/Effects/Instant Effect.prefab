@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 593097933152473311, guid: 5cab2a25b12a1c64295fcc99eb9764d6, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593097933152473311, guid: 5cab2a25b12a1c64295fcc99eb9764d6, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593097933152473311, guid: 5cab2a25b12a1c64295fcc99eb9764d6, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593097933152473311, guid: 5cab2a25b12a1c64295fcc99eb9764d6, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5409071563597542639, guid: 5cab2a25b12a1c64295fcc99eb9764d6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -96,4 +112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c1b3f20da6fd4d4fa11396e870ab40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.5
+  duration: 1

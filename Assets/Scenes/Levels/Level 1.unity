@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1765646399198451081, guid: e0e4d8d215ee05c40bedd31850ef0353, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1765646399198451081, guid: e0e4d8d215ee05c40bedd31850ef0353, type: 3}
       propertyPath: m_LocalPosition.x
@@ -193,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2380795870155925695, guid: 6cbaff9c3296f034bbf86b193a8c6fd2, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2380795870155925695, guid: 6cbaff9c3296f034bbf86b193a8c6fd2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -293,11 +293,296 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbaff9c3296f034bbf86b193a8c6fd2, type: 3}
+--- !u!1001 &1021471219
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8242227984853861498, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_Name
+      value: Hound of Tindalos (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.474179
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.482676
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
 --- !u!4 &1392515775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2380795870155925695, guid: 6cbaff9c3296f034bbf86b193a8c6fd2, type: 3}
   m_PrefabInstance: {fileID: 989063841}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1442790346
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8242227984853861498, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_Name
+      value: Hound of Tindalos (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.985876
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.6596494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+--- !u!1001 &1512935391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8242227984853861498, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_Name
+      value: Hound of Tindalos (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.737362
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3374035
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+--- !u!1001 &1698543302
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8242227984853861498, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_Name
+      value: Hound of Tindalos (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.6968937
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.88999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+--- !u!1001 &1825333794
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8242227984853861498, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_Name
+      value: Hound of Tindalos (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.54201
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.746278
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
 --- !u!1001 &1952133291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -311,7 +596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -320,6 +605,120 @@ PrefabInstance:
     - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
       propertyPath: m_LocalPosition.y
       value: 6.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+--- !u!1001 &1974455656
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8242227984853861498, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_Name
+      value: Hound of Tindalos (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.113401
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.130115
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+--- !u!1001 &2091746796
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8242227984853861498, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_Name
+      value: Hound of Tindalos (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.07917
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.259961
       objectReference: {fileID: 0}
     - target: {fileID: 8324540904546157565, guid: a49f35c55cd072445bd4556262f82ca6, type: 3}
       propertyPath: m_LocalPosition.z

@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1103141746888118891, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1692766841183595406, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
       propertyPath: m_Radius
       value: 1.273921
@@ -65,15 +69,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5063132028632384988, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
       propertyPath: range
-      value: 15
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5063132028632384988, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
       propertyPath: barLife
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5063132028632384988, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
+      propertyPath: attackSlowdownTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063132028632384988, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
       propertyPath: attacks.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063132028632384988, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
+      propertyPath: attackSlowdownFactor
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5063132028632384988, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
       propertyPath: attacks.Array.data[0]
@@ -82,6 +94,10 @@ PrefabInstance:
     - target: {fileID: 5063132028632384988, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
       propertyPath: attacks.Array.data[0].attack
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279355967649513111, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7120659453390726755, guid: 2b72c8515107d6a4681ab9f1e2bd3e07, type: 3}
       propertyPath: m_RootOrder
@@ -194,6 +210,14 @@ PrefabInstance:
     - target: {fileID: 283170846147453355, guid: d7f74df77cb78f1489c5a3d8979b9976, type: 3}
       propertyPath: m_Name
       value: Energy Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270921380822649205, guid: d7f74df77cb78f1489c5a3d8979b9976, type: 3}
+      propertyPath: damage
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270921380822649205, guid: d7f74df77cb78f1489c5a3d8979b9976, type: 3}
+      propertyPath: cooldown
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8705695747488621310, guid: d7f74df77cb78f1489c5a3d8979b9976, type: 3}
       propertyPath: m_RootOrder

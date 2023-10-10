@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InstantEffect : Effect
 {
-    public float duration = 0.5f;
+    public float duration = 1f;
     void Update()
     {
         duration -= Time.deltaTime;

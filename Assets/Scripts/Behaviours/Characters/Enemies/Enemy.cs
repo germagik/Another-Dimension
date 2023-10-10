@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using Utils;
 
@@ -10,32 +7,35 @@ public class Enemy : Character
 {
     public DropProbability[] drops = new DropProbability[0];
     private Warrior warrior;
-    public override void Start()
+    private Vector3 distance;
+    public void Start()
     {
-        base.Start();
         warrior = Warrior.Instance(); 
     }
     void Update()
     {
-       Move(); 
+        if (warrior.IsDestroyed())
+        {
+            return;
+        }
+        Move();
+        Attack();
     }
     void Move()
     {
-        Vector3 direction = warrior.transform.position - transform.position;
-        warrior.CheckEnemyAtDistance(this, direction.magnitude);
-        PointTo(direction);
-        if(direction.magnitude > range)
+        distance = warrior.transform.position - transform.position;
+        warrior.CheckEnemyAtDistance(this, distance.magnitude);
+        PointTo(distance);
+        if (distance.magnitude > range)
         {
-            MoveTo(direction);
-        } 
-        else
-        {
-            Attack();
-        }      
+            MoveTo(distance);
+        }
     }
     void Attack()
     {
-        attacks[0].Perform("Player");
+        if (distance.magnitude <= range) {
+            attacks[0].Perform("Player");
+        }
     }
     
 }

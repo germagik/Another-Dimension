@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class ShootingEffect : Effect
 {
@@ -23,5 +20,10 @@ public class ShootingEffect : Effect
             Destroy(gameObject);
         }
         lastPosition = transform.position;
+    }
+    public override void AfterDamage()
+    {
+        base.AfterDamage();
+        Destroy(gameObject);
     }
 }

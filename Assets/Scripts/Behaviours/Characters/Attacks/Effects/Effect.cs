@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Effect : MonoBehaviour
+public abstract class Effect : MonoBehaviour
 {
     private string targetTag;
     private float damage;
@@ -17,8 +15,11 @@ public class Effect : MonoBehaviour
         {
             Character character = collision.gameObject.GetComponent<Character>();
             character.ReceiveDamage(damage);
-            Destroy(gameObject);
+            AfterDamage();
         }
     }
- 
+    public virtual void AfterDamage()
+    {
+        // No hace nada por defecto
+    }
 }
