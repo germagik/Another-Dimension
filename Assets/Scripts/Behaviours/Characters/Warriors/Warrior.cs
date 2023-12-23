@@ -1,143 +1,139 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System.Linq;
 using System;
-
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+using Utils;
 
 public class Warrior : Character
 {
-    private static Warrior instance;
-    public static Warrior Instance()
-    {
-        return instance;
-    }
-    protected float reaction = 0.15f;
-    [SerializeField] protected AttackConfiguration[] attacks = new AttackConfiguration[0];
-    protected ClosestEnemy closest;
-    protected float attacking;
-    protected float attackingTimer;
-    [SerializeField] protected float attackSlowdownTime = 2f;
-    [SerializeField] protected float attackSlowdownFactor = 2f;
-    public void CheckEnemyAtDistance(Enemy enemy, float distance)
-    {
-        if (distance <= range)
-        {
-            if (closest == null || distance < closest.distance)
-            {
-                closest = new ClosestEnemy(enemy, distance);
-            }
-        }
-        else if (closest != null && closest.enemy == enemy)
-        {
-            closest = null;
-        }
-    }
-    protected override void Reset()
-    {
-        base.Reset();
-        Attack[] attacksComponents = GetComponentsInChildren<Attack>();
-        AttackConfiguration[] previousAttacks = attacks;
-        attacks = new AttackConfiguration[attacksComponents.Length];
-        for (int i = 0; i < attacksComponents.Length; i++)
-        {
-            Attack attack = attacksComponents[i];
-            AttackConfiguration previousAttack = previousAttacks.ElementAtOrDefault(i);
-            if(previousAttack != null)
-            {
-                previousAttack.attack = attack;
-                attacks[i] = previousAttack;
-            } else
-            {
-                attacks[i] = new AttackConfiguration(attack);
-            }
-        }
-    }
-    
-    void Awake()
-    {
-        instance = this;
-    }
+	private static Warrior instance;
+	public static Warrior Instance() => instance;
+	[SerializeField] protected float reaction = 0.15f;
+	[SerializeField] protected Indicator distantIndicator;
+	private Dictionary<Enemy, Indicator> distants = new Dictionary<Enemy, Indicator>();
+	private ClosestEnemy closest;
+	protected ClosestEnemy Closest
+	{
+		get
+		{
+			if(closest != null && closest.enemy.IsDestroyed())
+			{
+				closest = null;
+			}
+			return closest;
+		}
+		set
+		{
+			closest = value;
+		}
+	}
 
-    void Update()
-    {
-        Move();
-        Attack();
-    }
+	void Awake()
+	{
+		instance = this;
+	}
 
-    void Move()
-    {
-        float axisX = Input.GetAxis("Horizontal");
-        float axisY = Input.GetAxis("Vertical");
-        Vector3 direction = new Vector3(axisX, axisY);
-        if (direction.magnitude >= reaction) {
-            if (attackingTimer > 0)
-            {
-                MoveTo(direction, attackSlowdownFactor);
-                if (closest == null) {
-                    PointTo(direction);
-                }
-            }
-            else
-            {
-                MoveTo(direction);
-                PointTo(direction);
-            }
-        }
-    }
+	protected override void Update()
+	{
+		base.Update();
+		Move();
+		Attack();
+	}
 
-    void Attack()
-    {
-        if (attackingTimer > 0)
-        {
-            attackingTimer -= Time.deltaTime;
-            Aim();
-        }
-        else
-        {
-            attackingTimer = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            attackingTimer = attackSlowdownTime;
-            Aim();
-            attacks[0].attack.Perform();
-        }
-    }
-    void Aim()
-    {
-        if (closest != null)
-        {
-            PointTo(closest.enemy.transform.position - transform.position);
-        }
-    }
-}
+	public void CheckEnemyAtDistance(Enemy enemy, float distance)
+	{
+		if(distance <= range)
+		{
+			if(Closest == null || distance < Closest.distance)
+			{
+				Closest = new ClosestEnemy(enemy, distance);
+			}
+		}
+		else if(Closest != null && Closest.enemy == enemy)
+		{
+			Closest = null;
+		}
+		Vector2 enemyPosition = Camera.main.WorldToScreenPoint(enemy.transform.position);
+		if(enemyPosition.x < 0 || enemyPosition.x > Camera.main.pixelWidth ||
+			enemyPosition.y < 0 || enemyPosition.y > Camera.main.pixelHeight)
+		{
+			if(!distants.ContainsKey(enemy))
+			{
+				Indicator indicator = Instantiate(distantIndicator, transform);
+				indicator.Initialize(enemy);
+				distants.Add(enemy,indicator);
+			}
+		}
+		else if(distants.ContainsKey(enemy))
+		{
+			Destroy(distants[enemy].gameObject);
+			distants.Remove(enemy);
+		}
+	}
 
+	void Move()
+	{
+		float axisX = Input.GetAxis("Horizontal");
+		float axisY = Input.GetAxis("Vertical");
+		Vector3 direction = new Vector3(axisX, axisY);
+		if(direction.magnitude >= reaction)
+		{
+			if (Input.GetKey(KeyCode.S))
+			{
+				running = true;
+			}
+			else
+			{
+				running = false;
+			}
+			if(CurrentAttack != null)
+			{
+				MoveTo(direction);
+				if(Closest == null)
+				{
+					PointTo(direction);
+				}
+			}
+			else
+			{
+				MoveTo(direction);
+				PointTo(direction);
+			}
+		}
+	}
 
-public enum AimingStrategy
-{
-    Closest, Stronger, Healthier
-}
-
-[Serializable]
-public class AttackConfiguration
-{
-    public AimingStrategy aimingStrategy;
-    public Attack attack;
-
-    public AttackConfiguration(Attack newAttack, AimingStrategy newAimingStrategy = AimingStrategy.Closest) {
-        attack = newAttack;
-        aimingStrategy = newAimingStrategy;
-    }
+	void Attack()
+	{
+		if(CurrentAttack != null)
+		{
+			Aim();
+		}
+		if(Input.GetKey(KeyCode.A))
+		{
+			Aim();
+			PerformAttack(0);
+		}
+	}
+	void Aim()
+	{
+		if(Closest != null)
+		{
+			PointTo(Closest.enemy.transform.position - transform.position);
+		}
+	}
+	public void PowerUp(float factor)
+	{
+		power += factor;
+	}
 }
 
 public class ClosestEnemy
 {
-    public Enemy enemy;
-    public float distance;
-    public ClosestEnemy(Enemy newEnemy, float newDistance)
-    {
-        enemy = newEnemy;
-        distance = newDistance;
-    }
+	public Enemy enemy;
+	public float distance;
+	public ClosestEnemy(Enemy newEnemy, float newDistance)
+	{
+		enemy = newEnemy;
+		distance = newDistance;
+	}
 }

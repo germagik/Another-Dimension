@@ -51,9 +51,98 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371132820290388425, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361944431736693713, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f61b682118fb544186154042779c5c4, type: 3}
     - target: {fileID: 7739049784073014523, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
       propertyPath: m_Name
-      value: Restauration
+      value: Heal Potion (Medium)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793246557299922613, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793246557299922613, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793246557299922613, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5052f6bf5e2016445b736ed911d6f0ae, type: 3}
+    - target: {fileID: 8793246557299922613, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+--- !u!1 &6155832699058531587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7739049784073014523, guid: 6777fcb29c868ce4c9cd5c214bb75072, type: 3}
+  m_PrefabInstance: {fileID: 4470748418731565560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6115684427927219205
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6155832699058531587}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c06ba6110f28c544a8bfbeac74ddb7c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

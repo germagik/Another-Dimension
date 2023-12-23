@@ -1,18 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Utils;
 
-public class Item : MonoBehaviour
+public abstract class Item : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField] protected float factor = 0.1f;
+	protected bool taken = false;
+	protected Animator animator;
+	protected AudioSource audioSource;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	protected virtual void Start()
+	{
+		audioSource = GetComponent<AudioSource>();
+		animator = GetComponent<Animator>();
+	}
+
+	protected virtual void Update()
+	{
+		if (taken && !audioSource.isPlaying)
+		{
+			Destroy(gameObject);
+		}
+	}
+
+	public void OnTriggerEnter2D(Collider2D collision)
+	{
+		if(!taken && collision.gameObject.tag == KnownTags.Player.ToString())
+		{
+			Effect(collision);
+			animator.SetTrigger("Taken");
+			audioSource.Play();
+			taken = true;
+		}
+	}
+	protected abstract void Effect(Collider2D collision);
 }

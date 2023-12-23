@@ -53,7 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6120755294137808664, guid: 5749869580150414aadb79469b0c8931, type: 3}
       propertyPath: m_Name
-      value: Attack
+      value: Bite
       objectReference: {fileID: 0}
+    - target: {fileID: 8717912678271784391, guid: 5749869580150414aadb79469b0c8931, type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717912678271784391, guid: 5749869580150414aadb79469b0c8931, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 4598579026515674102, guid: afcce0a0ace71cc459d38356e0b2ca6c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5749869580150414aadb79469b0c8931, type: 3}

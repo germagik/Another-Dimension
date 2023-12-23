@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShootingEffect : Effect
@@ -8,10 +6,13 @@ public class ShootingEffect : Effect
     [SerializeField] protected float range = 20f;
     protected Vector3 lastPosition;
     protected float distance = 0f;
-    void Start()
-    {
-        lastPosition = transform.position;
-    }
+
+    protected override void Start()
+	{
+		base.Start();
+		lastPosition = transform.position;
+	}
+
     void Update()
     {
         transform.position -= transform.up * speed * Time.deltaTime;
